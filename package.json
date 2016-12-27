@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "npm cache clean && npm run rimraf -- lib",
-    "build": "npm run tsc -p src"
+    "build": "tsc -p src"
   },
   "repository": {
     "type": "git",
@@ -47,8 +47,8 @@
     "jasmine-core": "2.4.1",
     "karma": "1.3.0",
     "karma-jasmine": "1.0.2",
-    "tslint": "4.0.2",
-    "typescript": "2.0.0",
+    "tslint": "^4.0.2",
+    "typescript": "^2.0.0",
     "zone.js": "0.6.25"
   }
 }

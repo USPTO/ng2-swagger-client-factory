@@ -13,7 +13,6 @@
         "declaration": true
     }, 
     "exclude": [
-        "../node_modules",
-        "./Samples"
+        "../node_modules"
     ]
 }
