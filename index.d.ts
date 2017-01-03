@@ -1,1 +1,1 @@
-export * from './lib/swaggerclient-factory.component';
+export * from 'lib/swaggerclient-factory.component';

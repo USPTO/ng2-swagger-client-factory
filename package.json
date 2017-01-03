@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "npm cache clean && npm run rimraf -- lib",
-    "build": "tsc -p src"
+    "build": "tsc -p src -outDir lib --skipLibCheck"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
   "homepage": "https://github.com/USPTO/ng2-swagger-client-factory#readme",
   "dependencies": {
     "@angular/common": "2.0.0",
+    "@angular/core": "2.2.0",
     "ntypescript": "1.201609302242.1",
     "ponyfill-array-findindex": "1.0.0",
     "rimraf": "2.5.4",
