@@ -1,1 +1,1 @@
-exports.SwaggerClientFactory = require('lib/swaggerclient-factory.component').SwaggerClientFactory
+exports.SwaggerClientFactory = require('./lib/swaggerclient-factory.component').SwaggerClientFactory
