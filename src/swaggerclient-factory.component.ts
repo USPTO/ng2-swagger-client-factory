@@ -5,7 +5,8 @@ export class SwaggerClientFactory {
     
     private Swagger = require('swagger-client');
     private RSVP = require('rsvp');
-    private findIndex = require('ponyfill-array-findindex');
+    arrayFindIndex = require('array-find-index');
+
     private clients = []; 
     private promises = [];
 
@@ -31,9 +32,7 @@ export class SwaggerClientFactory {
      * @param {boolean} refresh - If true, replaces existing client for same resource
      */
     private addClientToCache(client:any, refresh:boolean) {
-        let idx = this.clients.findIndex(function (cachedClient) {
-            return(client.basePath === cachedClient.basePath)
-        })
+        let idx = this.arrayFindIndex(this.clients, cachedClient => client.basePath === cachedClient.basePath);
         if (idx === -1) {
             this.clients.push(client);
         } else if (idx > -1 && refresh) {
@@ -82,9 +81,7 @@ export class SwaggerClientFactory {
      * @param {string} basePath - The base path for the service that is being instatiated.
      */
     private removePromise(basePath:string) {
-        let idx = this.promises.findIndex(function (promiseObj) {
-            return(promiseObj.basePath === basePath)
-        })
+        let idx = this.arrayFindIndex(this.promises, promiseObj => promiseObj.basePath === basePath);
         if (idx > -1) {
             this.promises.splice(idx, 1);
         }
