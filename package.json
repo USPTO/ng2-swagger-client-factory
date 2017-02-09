@@ -30,6 +30,7 @@
     "array-find-index": "^1.0.2",
     "ntypescript": "1.201609302242.1",
     "rimraf": "2.5.4",
+    "rsvp": "^3.3.3",
     "rxjs": "5.0.1",
     "swagger-client": "2.1.20"
   },
